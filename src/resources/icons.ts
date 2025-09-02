@@ -20,6 +20,7 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiStarDuotone,
 } from "react-icons/pi";
 
 import {
@@ -27,6 +28,7 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPython,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads } from "react-icons/fa6";
@@ -57,6 +59,8 @@ export const iconLibrary: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  star: PiStarDuotone,
+  python: SiPython,
 };
 
 export type IconLibrary = typeof iconLibrary;

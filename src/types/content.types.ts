@@ -173,8 +173,12 @@ export interface About extends BasePageConfig {
     institutions: Array<{
       /** Institution name */
       name: string;
-      /** Description of studies */
-      description: React.ReactNode;
+      /** Course name */
+      course: string;
+      /** Timeframe of studies */
+      timeframe: string;
+      /** Description of coursework */
+      coursework: string;
     }>;
   };
   /** Technical skills section */
@@ -187,8 +191,6 @@ export interface About extends BasePageConfig {
     skills: Array<{
       /** Skill title */
       title: string;
-      /** Skill description */
-      description?: React.ReactNode;
       /** Skill tags */
       tags?: Array<{
         name: string;
@@ -206,6 +208,17 @@ export interface About extends BasePageConfig {
         height: number;
       }>;
     }>;
+  };
+  /** Achievements and Certifications section */
+  achievements: {
+    /** Whether to display achievements section */
+    display: boolean;
+    /** Title for the achievements section */
+    title: string;
+    /** List of certifications */
+    certifications: React.ReactNode[];
+    /** List of other achievements */
+    other: React.ReactNode[];
   };
 }
 
@@ -234,5 +247,22 @@ export interface Gallery extends BasePageConfig {
     alt: string;
     /** Image orientation (horizontal/vertical) */
     orientation: string;
+  }>;
+}
+
+/**
+ * Recommendations page configuration.
+ */
+export interface Recommendations extends BasePageConfig {
+  /** List of recommendations */
+  testimonials: Array<{
+    /** Name of the person giving the testimonial */
+    name: string;
+    /** Their role or title */
+    role: string;
+    /** The testimonial content */
+    quote: string;
+    /** Path to their avatar image */
+    avatar?: string;
   }>;
 }

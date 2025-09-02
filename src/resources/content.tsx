@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Recommendations } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Mohammed",
   lastName: "Bookwala",
-  name: `Mohammed Bookwala`,
-  role: "Aspiring Data Scientist",
+  name: "Mohammed Bookwala",
+  role: "Business & Data Analyst | Psychology - AI - Data Science",
   avatar: "/images/avatar.jpg",
   email: "mdbk2004@gmail.com",
-  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Gujarati", "Hindi", "Arabic"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kolkata",
+  languages: ["English (Fluent)", "Hindi (Fluent)", "Gujarati (Fluent)", "Arabic (Basic)"],
 };
 
 const newsletter: Newsletter = {
@@ -19,8 +19,6 @@ const newsletter: Newsletter = {
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
@@ -31,36 +29,31 @@ const social: Social = [
     icon: "linkedin",
     link: "https://linkedin.com/in/mb04",
   },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
 ];
 
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Aspiring Data Scientist focused on Real-World Impact</>,
+  title: "Mohammed Bookwala | Business & Data Analyst Portfolio",
+  description: "Business and Data Analyst blending psychology, AI and data science to deliver actionable business insights, process improvement, and real-world analytics.",
+  headline: <>Hi, I'm Mohammed. A Business and Data Analyst creating data-driven solutions that bridge the gap between user behavior and business outcomes.</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Psychometric & Cognitive Hiring Tool (SaaS MVP)</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "",
+    href: "https://github.com/YottaParasec/psychometric-hiring-tool",
   },
   subline: (
     <>
-      I'm Mohammed, a psychology undergraduate with a strong foundation in data science and behavioral analysis.
+      I specialize in cross-functional teamwork and project-driven learning, always with a focus on process improvement and user experience.
     </>
   ),
 };
@@ -86,7 +79,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Psychology undergraduate with a strong foundation in data science and behavioral analysis. Skilled in Python, SQL, and machine learning libraries such as Pandas and Scikit-learn. I enjoy applying data-driven thinking to real-world challenges, blending analytical skills with human-centered insights. Seeking a Data Scientist role across industries that value thoughtful, impact-oriented work.
+        Experienced Business and Data Analyst with a foundation in psychology, artificial intelligence, and data science. Adept at translating complex data into meaningful insights and business value, driving process optimization, leading analytics projects, and collaborating across disciplines. Proven communicator, stakeholder manager, and team contributor with hands-on experience in requirements gathering, reporting, visualization, and technical delivery.
       </>
     ),
   },
@@ -96,31 +89,51 @@ const about: About = {
     experiences: [
       {
         company: "Playdawn Consulting",
-        timeframe: "Dec 2024 - Feb 2025",
-        role: "Data Science Intern",
+        timeframe: "Dec 2024 – Feb 2025",
+        role: "Data Science/Business Analytics Intern",
         achievements: [
           <>
-            Built an end-to-end salary-prediction pipeline for the gaming industry.
+            Built and deployed a salary prediction platform (Python, Pandas, NumPy, SciPy, scikit-learn, Matplotlib) for the gaming sector.
           </>,
           <>
-            Performed data cleaning, feature engineering, model training, containerized API deployment with Docker, and serverless hosting via AWS.
+            Managed requirements gathering, stakeholder analysis, model training, and system deployment (FastAPI/AWS Lambda).
+          </>,
+          <>
+            Led data cleaning and mapping (LLMs), engineered company segmentation (Excel), and delivered business reporting.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Placeholder image 1",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Studio Sirah",
-        timeframe: "June 2025 - July 2025",
-        role: "Data Science Intern (College Internship)",
+        timeframe: "June 2025 – July 2025",
+        role: "Data Analyst Intern (Product Analytics & Reporting)",
         achievements: [
           <>
-            Worked on debugging and testing Python ETL scripts.
+            Streamlined analytics pipelines (SQL, Python, Pandas) for robust business reporting and enhanced user experience.
           </>,
           <>
-            Assisted in identifying broken data flows and helped maintain the reliability of internal analytics processes.
+            Improved data backfilling for analytics workflows and enhanced product metrics reliability.
+          </>,
+          <>
+            Participated in user playtesting, synthesized feedback for designers, and presented findings to stakeholders.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Placeholder image 2",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -129,8 +142,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "RV University",
-        description: <>B.Sc. in Psychology with a Minor in Artificial Intelligence & Data Science (Aug 2023 - May 2026)</>,
+        name: "RV University, Bengaluru",
+        course: "B.Sc. Psychology, Minor in Artificial Intelligence & Data Science",
+        timeframe: "Aug 2023 – May 2026",
+        coursework: "Key coursework: behavioral analysis, machine learning, statistics, data pipelines, data visualization, informal debates, and fieldwork (ProtoVillage Rural Sustainability Contributor). Led major analytics and dashboarding projects.",
+      },
+      {
+        name: "University of Padua, Italy",
+        course: "Unfinished Bachelor's Degree in Psychological Science",
+        timeframe: "October 2022 - July 2023",
+        coursework: "Focused on experimental design, academic research in psychology, and collaborative group projects.",
       },
     ],
   },
@@ -139,22 +160,69 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Data Science",
-        description: (
-          <>Python, SQL, Data Analysis, Machine Learning, Data Visualization, Feature Engineering, Tableau, API Development, Model Deployment, Pandas</>
-        ),
+        title: "Core Business & Analytics",
         tags: [
-          {
-            name: "Python",
-            icon: "python",
-          },
-            {
-            name: "SQL",
-            icon: "sql",
-          },
+          { name: "Market Research", icon: "star" },
+          { name: "Requirement Analysis", icon: "document" },
+          { name: "Stakeholder Communication", icon: "person" },
+          { name: "Project Planning", icon: "calendar" },
+          { name: "Process Documentation", icon: "document" },
+          { name: "Data Cleaning", icon: "star" },
+          { name: "Statistical Analysis", icon: "star" },
+          { name: "Dashboarding (Tableau)", icon: "grid" },
+          { name: "Data Storytelling", icon: "book" },
+          { name: "Presentation Skills", icon: "star" },
+          { name: "Agile Methodology", icon: "star" },
         ],
-        images: [],
       },
+      {
+        title: "Programming & Tools",
+        tags: [
+          { name: "Python", icon: "python" },
+          { name: "SQL", icon: "star" },
+          { name: "Pandas", icon: "star" },
+          { name: "NumPy", icon: "star" },
+          { name: "SciPy", icon: "star" },
+          { name: "Scikit-learn", icon: "star" },
+          { name: "Tableau", icon: "star" },
+          { name: "Excel", icon: "document" },
+          { name: "AWS", icon: "rocket" },
+          { name: "FastAPI", icon: "rocket" },
+          { name: "Flask", icon: "rocket" },
+          { name: "MySQL", icon: "star" },
+          { name: "Matplotlib", icon: "figma" },
+          { name: "Seaborn", icon: "figma" },
+          { name: "Plotly", icon: "figma" },
+          { name: "REST APIs", icon: "openLink" },
+          { name: "Git/GitHub", icon: "github" },
+          { name: "Jira (basic)", icon: "star" },
+          { name: "Confluence (basic)", icon: "document" },
+          { name: "MS Office", icon: "document" },
+        ],
+      },
+      {
+        title: "Interpersonal & Soft Skills",
+        tags: [
+          { name: "Cross-cultural teamwork", icon: "person" },
+          { name: "Leadership", icon: "person" },
+          { name: "Public Speaking", icon: "star" },
+          { name: "Adaptability", icon: "star" },
+          { name: "Collaborative problem-solving", icon: "star" },
+        ],
+      },
+    ],
+  },
+  achievements: {
+    display: true,
+    title: "Achievements & Certifications",
+    certifications: [
+      "IBM Artificial Intelligence Fundamentals, IBM Generative AI",
+    ],
+    other: [
+      "Debate/Public Speaking: multiple intercollegiate contests, solo informal debates, university presentations",
+      "Fieldwork: Rural sustainability contributor (ProtoVillage)",
+      "Esports: Valorant clan champion (informal)",
+      "Publication: “100 Quotes for the Warrior Within” (2023, Author)",
     ],
   },
 };
@@ -228,4 +296,55 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const recommendations: Recommendations = {
+  path: "/recommendations",
+  label: "Recommendations",
+  title: `Recommendations – ${person.name}`,
+  description: `Testimonials and recommendations for ${person.name}`,
+  testimonials: [
+    {
+      name: "John Doe",
+      role: "CEO at Company",
+      quote: "Mohammed is a great team player and a valuable asset to any team.",
+      avatar: "/images/projects/project-01/avatar-01.jpg",
+    },
+    {
+      name: "Jane Smith",
+      role: "Project Manager",
+      quote: "I was impressed by Mohammed's ability to quickly learn new technologies.",
+      avatar: "/images/projects/project-01/avatar-01.jpg",
+    },
+  ],
+};
+
+
+
+export { person, social, newsletter, home, about, blog, work, gallery, recommendations };
+
+
+export const navigation = [
+  {
+    ...home,
+    display: true,
+  },
+  {
+    ...work,
+    display: true,
+  },
+  {
+    ...blog,
+    display: true,
+  },
+  {
+    ...gallery,
+    display: true,
+  },
+  {
+    ...about,
+    display: true,
+  },
+  {
+    ...recommendations,
+    display: true,
+  },
+];
