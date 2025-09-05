@@ -29,6 +29,11 @@ const social: Social = [
     icon: "linkedin",
     link: "https://linkedin.com/in/mb04",
   },
+  {
+    name: "Email",
+    icon: "email",
+    link: "mailto:mdbk2004@gmail.com",
+  },
 ];
 
 const home: Home = {
@@ -49,7 +54,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "https://github.com/YottaParasec/psychometric-hiring-tool",
+    href: "/work/psychometric-hiring-tool",
   },
   subline: (
     <>
@@ -79,7 +84,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Experienced Business and Data Analyst with a foundation in psychology, artificial intelligence, and data science. Adept at translating complex data into meaningful insights and business value, driving process optimization, leading analytics projects, and collaborating across disciplines. Proven communicator, stakeholder manager, and team contributor with hands-on experience in requirements gathering, reporting, visualization, and technical delivery.
+        I'm a Business and Data Analyst driven by a fascination with the human mind and a passion for technology. My journey began with psychology, where I learned to understand the 'why' behind human behavior. Now, I combine that with my skills in AI and data science to not only understand the 'why', but also to predict the 'what' and prescribe the 'how'. I believe that data is a powerful tool for telling stories and driving meaningful change, and I'm passionate about using my skills to build data-driven solutions that bridge the gap between user behavior and business outcomes.
       </>
     ),
   },
@@ -104,17 +109,18 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Placeholder image 1",
+            src: "/images/playdawnnew.jpg",
+            alt: "Playdawn Consulting",
             width: 16,
             height: 9,
+            link: "https://playdawn.com/salary-prediction",
           },
         ],
       },
       {
         company: "Studio Sirah",
         timeframe: "June 2025 – July 2025",
-        role: "Data Analyst Intern (Product Analytics & Reporting)",
+        role: "Data Analyst Intern (College Internship)",
         achievements: [
           <>
             Streamlined analytics pipelines (SQL, Python, Pandas) for robust business reporting and enhanced user experience.
@@ -123,16 +129,8 @@ const about: About = {
             Improved data backfilling for analytics workflows and enhanced product metrics reliability.
           </>,
           <>
-            Participated in user playtesting, synthesized feedback for designers, and presented findings to stakeholders.
+            Participated in user playtesting, synthesized feedback for designers, and presented findings to college faculty.
           </>,
-        ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Placeholder image 2",
-            width: 16,
-            height: 9,
-          },
         ],
       },
     ],
@@ -146,12 +144,30 @@ const about: About = {
         course: "B.Sc. Psychology, Minor in Artificial Intelligence & Data Science",
         timeframe: "Aug 2023 – May 2026",
         coursework: "Key coursework: behavioral analysis, machine learning, statistics, data pipelines, data visualization, informal debates, and fieldwork (ProtoVillage Rural Sustainability Contributor). Led major analytics and dashboarding projects.",
+        images: [
+          {
+            src: "/images/rv_university.png",
+            alt: "RV University",
+            width: 16,
+            height: 9,
+            link: "https://rvu.edu.in/",
+          },
+        ],
       },
       {
         name: "University of Padua, Italy",
-        course: "Unfinished Bachelor's Degree in Psychological Science",
+        course: <><strong>Unfinished</strong> Bachelor's Degree in Psychological Science</>,
         timeframe: "October 2022 - July 2023",
         coursework: "Focused on experimental design, academic research in psychology, and collaborative group projects.",
+        images: [
+          {
+            src: "/images/unipdnew.jpg",
+            alt: "University of Padua",
+            width: 16,
+            height: 9,
+            link: "https://www.unipd.it/en/educational-offer/first-cycle-degrees/school-of-psychology?tipo=L&scuola=PS&ordinamento=2025&key=PS2959",
+          },
+        ],
       },
     ],
   },
@@ -216,7 +232,14 @@ const about: About = {
     display: true,
     title: "Achievements & Certifications",
     certifications: [
-      "IBM Artificial Intelligence Fundamentals, IBM Generative AI",
+      {
+        name: "IBM Artificial Intelligence Fundamentals",
+        image: "/images/ibm_logo.jpeg",
+      },
+      {
+        name: "IBM Generative AI",
+        image: "/images/ibm_logo.jpeg",
+      },
     ],
     other: [
       "Debate/Public Speaking: multiple intercollegiate contests, solo informal debates, university presentations",
@@ -227,10 +250,10 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about data science and tech...",
+const insights: Blog = {
+  path: "/insights",
+  label: "Insights",
+  title: "Ideas in Progress. Thoughts Unfiltered.",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -245,61 +268,12 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
 
-const recommendations: Recommendations = {
-  path: "/recommendations",
-  label: "Recommendations",
-  title: `Recommendations – ${person.name}`,
+
+const testimonials: Recommendations = {
+  path: "/testimonials",
+  label: "Testimonials",
+  title: `Testimonials – ${person.name}`,
   description: `Testimonials and recommendations for ${person.name}`,
   testimonials: [
     {
@@ -319,7 +293,7 @@ const recommendations: Recommendations = {
 
 
 
-export { person, social, newsletter, home, about, blog, work, gallery, recommendations };
+export { person, social, newsletter, home, about, insights, work, testimonials };
 
 
 export const navigation = [
@@ -332,19 +306,15 @@ export const navigation = [
     display: true,
   },
   {
-    ...blog,
-    display: true,
-  },
-  {
-    ...gallery,
-    display: true,
-  },
-  {
     ...about,
     display: true,
   },
   {
-    ...recommendations,
+    ...testimonials,
+    display: true,
+  },
+  {
+    ...insights,
     display: true,
   },
 ];

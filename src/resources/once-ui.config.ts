@@ -19,9 +19,8 @@ const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
-  "/recommendations": true,
+  "/testimonials": true,
+  "/insights": true,
 };
 
 const display: DisplayConfig = {
@@ -141,7 +140,7 @@ const effects: EffectsConfig = {
 };
 
 const mailchimp: MailchimpConfig = {
-  action: "https://url/subscribe/post?parameters",
+  action: "https://script.google.com/macros/s/AKfycbxtaO9FNrMmGZXjidfQZJRUJdZyoGl4C2e2RByJvXVjpLybfWKxdSVpdP3gJgPk1aB/exec",
   effects: {
     mask: {
       cursor: true,

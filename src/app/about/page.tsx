@@ -11,6 +11,7 @@ import {
   Meta,
   Schema,
   Row,
+  SmartLink,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -164,6 +165,27 @@ export default function About() {
                 fitWidth
                 data-border="rounded"
               >
+                <React.Fragment>
+                  <Row s={{ hide: true }}>
+                    <Button
+                      href="/api/download-resume"
+                      prefixIcon="document"
+                      label="Download Resume"
+                      size="s"
+                      weight="default"
+                      variant="secondary"
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <IconButton
+                      size="l"
+                      key="download-resume-icon"
+                      href="/api/download-resume"
+                      icon="document"
+                      variant="secondary"
+                    />
+                  </Row>
+                </React.Fragment>
                 {social.map(
                   (item) =>
                     item.link && (
@@ -236,21 +258,29 @@ export default function About() {
                     {experience.images && experience.images.length > 0 && (
                       <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
+                          <Column key={index} gap="8">
+                            <Row
+                              border="neutral-medium"
                               radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
+                              minWidth={image.width}
+                              height={image.height}
+                            >
+                              <Media
+                                radius="m"
+                                sizes={image.width.toString()}
+                                alt={image.alt}
+                                src={image.src}
+                              />
+                            </Row>
+                            {image.link && (
+                              <Button
+                                href={image.link}
+                                label="View Project"
+                                size="s"
+                                variant="secondary"
+                              />
+                            )}
+                          </Column>
                         ))}
                       </Row>
                     )}
@@ -282,6 +312,35 @@ export default function About() {
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {institution.coursework}
                     </Text>
+                    {institution.images && institution.images.length > 0 && (
+                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
+                        {institution.images.map((image, index) => (
+                          <Column key={index} gap="8">
+                            <Row
+                              border="neutral-medium"
+                              radius="m"
+                              minWidth={image.width}
+                              height={image.height}
+                            >
+                              <Media
+                                radius="m"
+                                sizes={image.width.toString()}
+                                alt={image.alt}
+                                src={image.src}
+                              />
+                            </Row>
+                            {image.link && (
+                              <Button
+                                href={image.link}
+                                label="View University"
+                                size="s"
+                                variant="secondary"
+                              />
+                            )}
+                          </Column>
+                        ))}
+                      </Row>
+                    )}
                   </Column>
                 ))}
               </Column>
@@ -307,7 +366,7 @@ export default function About() {
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="12">
                         {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon} variant="brand-alpha-default">
+                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
                             {tag.name}
                           </Tag>
                         ))}
@@ -333,10 +392,13 @@ export default function About() {
                 Certifications
               </Heading>
               <Column as="ul" gap="16" marginBottom="l">
-                {about.achievements.certifications.map((certification: React.ReactNode, index: number) => (
-                  <Text as="li" variant="body-default-m" key={index}>
-                    {certification}
-                  </Text>
+                {about.achievements.certifications.map((certification, index) => (
+                  <Row as="li" key={index} vertical="center" gap="8">
+                    {certification.image && (
+                      <img src={certification.image} alt={`${certification.name} Logo`} style={{ height: '30px' }} />
+                    )}
+                    <Text variant="body-default-m" weight="strong">{certification.name}</Text>
+                  </Row>
                 ))}
               </Column>
               <Heading as="h3" variant="heading-strong-m" onBackground="brand-weak" marginBottom="m">
