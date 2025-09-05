@@ -360,7 +360,7 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill.title}-${index}`} fillWidth marginBottom="l">
-                    <Heading as="h3" id={skill.title} variant="heading-strong-l" onBackground="neutral-default" marginBottom="m">
+                    <Heading as="h3" id={skill.title} variant="heading-strong-l" onBackground="neutral-strong" marginBottom="m">
   {skill.title}
 </Heading>
                     {skill.tags && skill.tags.length > 0 && (
