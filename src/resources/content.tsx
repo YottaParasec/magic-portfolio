@@ -287,16 +287,9 @@ const testimonials: Recommendations = {
   description: `Testimonials and recommendations for ${person.name}`,
   testimonials: [
     {
-      name: "John Doe",
-      role: "CEO at Company",
-      quote: "Mohammed is a great team player and a valuable asset to any team.",
-      avatar: "/images/projects/project-01/avatar-01.jpg",
-    },
-    {
-      name: "Jane Smith",
-      role: "Project Manager",
-      quote: "I was impressed by Mohammed&apos;s ability to quickly learn new technologies.",
-      avatar: "/images/projects/project-01/avatar-01.jpg",
+      name: "Prateek Shah",
+      role: "Co-founder at Studio Sirah",
+      quote: "Mohammed was very quick to pick up an entirely new and extensive codebase and make significant fixes and improvements to it in a short time. This speaks to his talent and resilience, as well as his ability and keenness to learn.",
     },
   ],
 };

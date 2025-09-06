@@ -7,7 +7,7 @@ export function TestimonialsView() {
       <Heading>Testimonials</Heading>
       <Column gap="l">
         {testimonials.testimonials.map((testimonial, index) => (
-          <Card key={index} border="neutral-alpha-weak" padding="l">
+          <Card key={index} padding="l" background="accent-alpha-weak" style={{ borderRadius: '16px', opacity: 0.7 }}>
             <Column gap="l">
               <Text variant="body-default-l" onBackground="neutral-strong">
                 &quot;{testimonial.quote}&quot;
