@@ -89,7 +89,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I&apos;m a Business and Data Analyst driven by a fascination with the human mind and a passion for technology. My journey began with psychology, where I learned to understand the &apos;why&apos; behind human behavior. Now, I combine that with my skills in AI and data science to not only understand the &apos;why&apos;, but also to predict the &apos;what&apos; and prescribe the &apos;how&apos;. I believe that data is a powerful tool for telling stories and driving meaningful change, and I&apos;m passionate about using my skills to build data-driven solutions that bridge the gap between user behavior and business outcomes.
+        Driven by curiosity and precision, I bridge the gap between human behavior and advanced analytics. With a foundation in psychology and experience in data science and AI, I turn complex data into business impact, streamlining analytics, building dashboards, and designing solutions that connect user actions to strategy.
+
+        My approach combines technical skill with behavioral insight, drawing on experience from building a psychometric hiring MVP and leading market analysis initiatives. Using Python, SQL, and visualization tools, I turn numbers into actionable stories.
       </>
     ),
   },
