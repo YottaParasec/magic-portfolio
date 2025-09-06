@@ -1,6 +1,7 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Recommendations } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
+
 const person: Person = {
   firstName: "Mohammed",
   lastName: "Bookwala",
@@ -12,11 +13,13 @@ const person: Person = {
   languages: ["English (Fluent)", "Hindi (Fluent)", "Gujarati (Fluent)", "Arabic (Basic)"],
 };
 
+
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: <>My weekly newsletter about data science and machine learning</>,
 };
+
 
 const social: Social = [
   {
@@ -36,13 +39,14 @@ const social: Social = [
   },
 ];
 
+
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
   title: "Mohammed Bookwala | Business & Data Analyst Portfolio",
   description: "Business and Data Analyst blending psychology, AI and data science to deliver actionable business insights, process improvement, and real-world analytics.",
-  headline: <>Hi, I'm Mohammed. A Business and Data Analyst creating data-driven solutions that bridge the gap between user behavior and business outcomes.</>,
+  headline: <>Hi, I&apos;m Mohammed. A Business and Data Analyst creating data-driven solutions that bridge the gap between user behavior and business outcomes.</>,
   featured: {
     display: true,
     title: (
@@ -62,6 +66,7 @@ const home: Home = {
     </>
   ),
 };
+
 
 const about: About = {
   path: "/about",
@@ -84,7 +89,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I'm a Business and Data Analyst driven by a fascination with the human mind and a passion for technology. My journey began with psychology, where I learned to understand the 'why' behind human behavior. Now, I combine that with my skills in AI and data science to not only understand the 'why', but also to predict the 'what' and prescribe the 'how'. I believe that data is a powerful tool for telling stories and driving meaningful change, and I'm passionate about using my skills to build data-driven solutions that bridge the gap between user behavior and business outcomes.
+        I&apos;m a Business and Data Analyst driven by a fascination with the human mind and a passion for technology. My journey began with psychology, where I learned to understand the &apos;why&apos; behind human behavior. Now, I combine that with my skills in AI and data science to not only understand the &apos;why&apos;, but also to predict the &apos;what&apos; and prescribe the &apos;how&apos;. I believe that data is a powerful tool for telling stories and driving meaningful change, and I&apos;m passionate about using my skills to build data-driven solutions that bridge the gap between user behavior and business outcomes.
       </>
     ),
   },
@@ -156,7 +161,7 @@ const about: About = {
       },
       {
         name: "University of Padua, Italy",
-        course: <><strong>Unfinished</strong> Bachelor's Degree in Psychological Science</>,
+        course: <><strong>Unfinished</strong> Bachelor&apos;s Degree in Psychological Science</>,
         timeframe: "October 2022 - July 2023",
         coursework: "Focused on experimental design, academic research in psychology, and collaborative group projects.",
         images: [
@@ -250,6 +255,7 @@ const about: About = {
   },
 };
 
+
 const insights: Blog = {
   path: "/insights",
   label: "Insights",
@@ -259,6 +265,7 @@ const insights: Blog = {
   // All posts will be listed on the /blog route
 };
 
+
 const work: Work = {
   path: "/work",
   label: "Work",
@@ -267,6 +274,7 @@ const work: Work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
+
 
 
 
@@ -285,7 +293,7 @@ const testimonials: Recommendations = {
     {
       name: "Jane Smith",
       role: "Project Manager",
-      quote: "I was impressed by Mohammed's ability to quickly learn new technologies.",
+      quote: "I was impressed by Mohammed&apos;s ability to quickly learn new technologies.",
       avatar: "/images/projects/project-01/avatar-01.jpg",
     },
   ],
@@ -293,7 +301,9 @@ const testimonials: Recommendations = {
 
 
 
+
 export { person, social, newsletter, home, about, insights, work, testimonials };
+
 
 
 export const navigation = [

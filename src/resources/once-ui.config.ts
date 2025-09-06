@@ -106,7 +106,7 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
@@ -162,7 +162,7 @@ const mailchimp: MailchimpConfig = {
     dots: {
       display: true,
       opacity: 20,
-      size: "2",
+      size: "4",
       color: "brand-on-background-weak",
     },
     grid: {

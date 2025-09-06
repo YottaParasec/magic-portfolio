@@ -90,6 +90,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({
         }}
         dots={{
           ...mailchimp.effects.dots,
+          size: "m",
           opacity: mailchimp.effects.dots.opacity as opacity,
         }}
         grid={{
@@ -98,6 +99,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({
         }}
         lines={{
           ...mailchimp.effects.lines,
+          size: "m",
           opacity: mailchimp.effects.lines.opacity as opacity,
         }}
       />

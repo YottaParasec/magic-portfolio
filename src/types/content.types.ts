@@ -160,6 +160,8 @@ export interface About extends BasePageConfig {
         width: number;
         /** Image height ratio */
         height: number;
+        /** Optional link for the image */
+        link?: string;
       }>;
     }>;
   };
@@ -174,11 +176,24 @@ export interface About extends BasePageConfig {
       /** Institution name */
       name: string;
       /** Course name */
-      course: string;
+      course: React.ReactNode;
       /** Timeframe of studies */
       timeframe: string;
       /** Description of coursework */
       coursework: string;
+      /** Images related to the institution */
+      images?: Array<{
+        /** Image source path */
+        src: string;
+        /** Image alt text */
+        alt: string;
+        /** Image width ratio */
+        width: number;
+        /** Image height ratio */
+        height: number;
+        /** Optional link for the image */
+        link?: string;
+      }>;
     }>;
   };
   /** Technical skills section */
@@ -216,7 +231,10 @@ export interface About extends BasePageConfig {
     /** Title for the achievements section */
     title: string;
     /** List of certifications */
-    certifications: React.ReactNode[];
+    certifications: Array<{
+      name: string;
+      image?: string;
+    }>;
     /** List of other achievements */
     other: React.ReactNode[];
   };

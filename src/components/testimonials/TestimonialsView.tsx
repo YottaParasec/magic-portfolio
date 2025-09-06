@@ -10,11 +10,11 @@ export function TestimonialsView() {
           <Card key={index} border="neutral-alpha-weak" padding="l">
             <Column gap="l">
               <Text variant="body-default-l" onBackground="neutral-strong">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </Text>
               <Row vertical="center" gap="m">
                 {testimonial.avatar && (
-                  <Avatar src={testimonial.avatar} size="l" alt={testimonial.name} />
+                  <Avatar src={testimonial.avatar} size="l" />
                 )}
                 <Column>
                   <Text variant="label-default-m" onBackground="neutral-strong">
